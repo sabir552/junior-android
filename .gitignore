@@ -1,0 +1,22 @@
+# Android
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# App build outputs (CI generates these)
+app/build/
+app/release/
+
+# Keystore — NEVER commit signing keys
+*.jks
+*.keystore
+release-key.*
+
+# Secrets — API keys stay in SharedPreferences, not here
+secrets.properties

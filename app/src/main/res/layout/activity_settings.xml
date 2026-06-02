@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050505"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⚙️  JUNIOR SETTINGS" android:textColor="#FF1744"
+            android:textSize="18sp" android:textStyle="bold"
+            android:fontFamily="monospace" android:layout_marginBottom="24dp"
+            android:paddingTop="40dp"/>
+
+        <!-- API Key -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Gemini API Key" android:textColor="#888888" android:textSize="12sp"/>
+        <EditText android:id="@+id/apiKeyInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="AIza..." android:inputType="textPassword"
+            android:textColor="#EEEEEE" android:textColorHint="#444444"
+            android:background="@drawable/bg_input_field"
+            android:padding="12dp" android:layout_marginTop="4dp" android:layout_marginBottom="16dp"/>
+
+        <!-- User Name -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Your Name" android:textColor="#888888" android:textSize="12sp"/>
+        <EditText android:id="@+id/userNameInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="e.g. Arjun" android:inputType="textPersonName"
+            android:textColor="#EEEEEE" android:textColorHint="#444444"
+            android:background="@drawable/bg_input_field"
+            android:padding="12dp" android:layout_marginTop="4dp" android:layout_marginBottom="16dp"/>
+
+        <!-- Model -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Gemini Model" android:textColor="#888888" android:textSize="12sp"/>
+        <Spinner android:id="@+id/modelSpinner"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:background="@drawable/bg_input_field"
+            android:layout_marginTop="4dp" android:layout_marginBottom="16dp"/>
+
+        <!-- Voice -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Voice" android:textColor="#888888" android:textSize="12sp"/>
+        <Spinner android:id="@+id/voiceSpinner"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:background="@drawable/bg_input_field"
+            android:layout_marginTop="4dp" android:layout_marginBottom="16dp"/>
+
+        <!-- Personality -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Personality Mode" android:textColor="#888888" android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
+        <RadioGroup android:id="@+id/radioPersonality"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/radioGf"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💕  GF / Companion (Hinglish, warm)"
+                android:textColor="#EEEEEE" android:buttonTint="#FF1744"/>
+            <RadioButton android:id="@+id/radioAssistant"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🤝  Assistant (Hinglish/English, balanced)"
+                android:textColor="#EEEEEE" android:buttonTint="#FF1744"
+                android:layout_marginTop="6dp"/>
+            <RadioButton android:id="@+id/radioProfessional"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💼  Professional (English, formal)"
+                android:textColor="#EEEEEE" android:buttonTint="#FF1744"
+                android:layout_marginTop="6dp"/>
+        </RadioGroup>
+
+        <!-- Prime Contacts -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Prime Contacts" android:textColor="#888888" android:textSize="12sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Say "mere close friend ko call karo" to call index 0"
+            android:textColor="#444444" android:textSize="11sp" android:layout_marginBottom="8dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/primeContactsRecycler"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+        <Button android:id="@+id/addPrimeContactBtn"
+            android:layout_width="wrap_content" android:layout_height="40dp"
+            android:text="+ Add Prime Contact" android:textColor="#FF1744"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="8dp" android:layout_marginBottom="16dp"/>
+
+        <!-- Accessibility Status -->
+        <TextView android:id="@+id/accessibilityStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Checking accessibility…" android:textSize="13sp"
+            android:padding="12dp" android:background="@drawable/bg_input_field"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Save -->
+        <Button android:id="@+id/saveButton"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="SAVE SETTINGS"
+            android:textColor="#FFFFFF" android:textStyle="bold"
+            android:background="@drawable/bg_save_button"
+            android:layout_marginBottom="32dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Junior</string>
+    <string name="accessibility_description">Junior AI accessibility service — controls apps and UI on your behalf.</string>
+    <string name="settings_title">Settings</string>
+    <string name="save">Save Settings</string>
+</resources>
