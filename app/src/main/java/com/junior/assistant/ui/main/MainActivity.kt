@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
         mainHandler.postDelayed({ initGeminiLive() }, 300)
     }
 
-    override fun onNewIntent(intent: Intent?) {
+    override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         handleCallIntent(intent)
     }
@@ -166,7 +166,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateStatusBar() {
         // Battery
         val batt = registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
-        val pct  = batt?.getIntExtra(BatteryManager.BATTERY_PROPERTY_CAPACITY, -1) ?: -1
+        val pct  = batt?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) ?: -1
         if (pct >= 0) binding.batteryText.text = "$pct%"
 
         // RAM
